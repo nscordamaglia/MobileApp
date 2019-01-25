@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_item">
+        <item
+            android:id="@+id/inicio"
+            android:icon="@drawable/inicio"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/cuenta"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/busqueda"
+            android:title="Buscar" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/configuracion"
+            android:title="Configuración" />
+        <item
+            android:id="@+id/mygenerated"
+            android:icon="@drawable/indicador_derecho"
+            android:title="Generados por mi equipo" />
+    </group>
+
+
+
+</menu>

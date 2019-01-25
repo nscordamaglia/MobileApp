@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "263003629144",
+    "firebase_url": "https://itracker-mobile.firebaseio.com",
+    "project_id": "itracker-mobile",
+    "storage_bucket": "itracker-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263003629144:android:2d6f11a9194271cc",
+        "android_client_info": {
+          "package_name": "test.android.com.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263003629144-v68utm02pc1ttrs6fibvaju2r05uj47r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6A9cTmBXepY4VX4g7p_HekVNXOjA-JSs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
