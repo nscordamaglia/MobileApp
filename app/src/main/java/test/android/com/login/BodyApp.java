@@ -183,7 +183,7 @@ public class BodyApp extends AppCompatActivity
 
             case "33":
                 estado = "inbox";
-                getSupportActionBar().setTitle("Lista de iTracker");
+                getSupportActionBar().setTitle("Lista de webApp");
                 break;
             case "39":
                 estado = "generados";
@@ -191,7 +191,7 @@ public class BodyApp extends AppCompatActivity
                 break;
             case "3339":
                 estado = "ambos";
-                getSupportActionBar().setTitle("Lista de iTracker");
+                getSupportActionBar().setTitle("Lista de webApp");
                 break;
         }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -226,10 +226,10 @@ public class BodyApp extends AppCompatActivity
     private void updateProfile() {
 
         Request rq = new Request(this);
-        Itracker itracker = new Itracker(this.getApplicationContext(), rq, null);
+        webApp webApp = new webApp(this.getApplicationContext(), rq, null);
 
         /* Updating user profile */
-        profile = new GetProfile(itracker,null);
+        profile = new GetProfile(webApp,null);
 
        switch (estado){
 
@@ -379,7 +379,7 @@ public class BodyApp extends AppCompatActivity
                     getSupportFragmentManager().popBackStackImmediate();
                 }
                 fragmentoGenerico = new List_fragment();
-                title = "Lista de iTracker";
+                title = "Lista de webApp";
             }
 
         } else if (id == R.id.logout) {

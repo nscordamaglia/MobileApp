@@ -7,7 +7,7 @@ public class GetEvent extends Action{
 
     private final String method;
     private String status;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
 
@@ -17,7 +17,7 @@ public class GetEvent extends Action{
      * Constructor
      * @param s
      */
-    public GetEvent(Itracker s, TKTobj tkt) {
+    public GetEvent(webApp s, TKTobj tkt) {
         super(s,tkt);
         this.method = "EVENT";
         this.status = "status";
@@ -33,11 +33,11 @@ public class GetEvent extends Action{
         this.status = status;
     }
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 

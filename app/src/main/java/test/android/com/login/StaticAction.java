@@ -1,7 +1,7 @@
 package test.android.com.login;
 
 /**
- * Created by u189299 on 11/07/2016.
+ * Created by Nicolas Scordamaglia on 11/07/2016.
  */
  
  /** Clase que permite guardar la ultima accion antes de un relogin */

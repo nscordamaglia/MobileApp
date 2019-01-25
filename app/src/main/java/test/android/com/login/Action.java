@@ -7,12 +7,12 @@ package test.android.com.login;
  */
 abstract class Action {
 
-    public Action(Itracker s,TKTobj t) {
+    public Action(webApp s,TKTobj t) {
 
 
     }
 
-    public Action(Itracker s){
+    public Action(webApp s){
 
 
     }

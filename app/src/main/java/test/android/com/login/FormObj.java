@@ -379,8 +379,8 @@ public class FormObj {
                             Log.d("option",text);
 
                             Request rq = new Request(activity);
-                            Itracker itracker = new Itracker(view.getContext(),rq,null);
-                            GetDownload down = new GetDownload(itracker,null);
+                            webApp webApp = new webApp(view.getContext(),rq,null);
+                            GetDownload down = new GetDownload(webApp,null);
                             down.Ejecute();
                         }
                     });
@@ -505,10 +505,10 @@ public class FormObj {
                 * ejecuta la accion correspondiente
                 */
                 Request rq = new Request(activity);
-                Itracker itracker = new Itracker(view.getContext(), rq, null);
+                webApp webApp = new webApp(view.getContext(), rq, null);
 
                             /* Action */
-                GetAction action = new GetAction(itracker);
+                GetAction action = new GetAction(webApp);
                 action.setDatanodes(new DataNodes("CREATE",null));
                 String act = FormObj.getInstance().getAction();
 

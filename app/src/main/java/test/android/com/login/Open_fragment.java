@@ -72,7 +72,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
     private ListView lv1;
     private SwipeRefreshLayout swipeRefreshLayout;
     private Request rq;
-    private Itracker itracker;
+    private webApp webApp;
     private ArrayList<OptionObj> list;
     private ListOptionAdapter adapter;
     private AppCompatActivity activity;
@@ -114,12 +114,12 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
                     swipeRefreshLayout.setRefreshing(false);
                     break;
                 case "Parametros invalidos en la solicitud||Sesion invalida o vencida218":
-                    itracker.setUser(User.getInstance().getUserName());
-                    itracker.setPass(User.getInstance().getPass());
+                    webApp.setUser(User.getInstance().getUserName());
+                    webApp.setPass(User.getInstance().getPass());
 
 
                     /** Login **/
-                    Login login = new Login(itracker, null);
+                    Login login = new Login(webApp, null);
                     login.Ejecute();
 
                     break;
@@ -160,7 +160,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 Log.d("relog", "entro por afterlog");
                 //tengo que reenviar la accion anterior al login
                 afterLogin();
-                //GetAction action = new GetAction(itracker);
+                //GetAction action = new GetAction(webApp);
                 //action.Resend();
 
 
@@ -172,7 +172,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 list = new ArrayList<>();
                 list = ArrayOptions.getInstance().getArrayList();
 
-                Log.d("itracker", "status: " + ArrayTKT.getInstance().getStatus());
+                Log.d("webApp", "status: " + ArrayTKT.getInstance().getStatus());
 
                 TextView optTitle = (TextView) view.findViewById(R.id.titleOpt);
                 optTitle.setVisibility(View.VISIBLE);
@@ -339,7 +339,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
     private void afterLogin() {
 
          /* Listing */
-        GetNew options = new GetNew(itracker);
+        GetNew options = new GetNew(webApp);
         options.Resend();
     }
 
@@ -357,7 +357,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
         actionBar = activity.getSupportActionBar();
         // update the actionbar to show the up carat/affordance
         if(actionBar == null){Log.d("actionbar","actionbar null");}
-        actionBar.setTitle("Nuevo iTracker");
+        actionBar.setTitle("Nuevo webApp");
         User.getInstance().getToogle().setDrawerIndicatorEnabled(false);
         //User.getInstance().getToogle().setHomeAsUpIndicator(android.R.drawable.ic_delete);
         User.getInstance().getToogle().setToolbarNavigationClickListener(new View.OnClickListener() {
@@ -443,7 +443,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 Log.d("option",path);
                 User.getInstance().setPath(path);
                 Log.d("tagback","path: " + User.getInstance().getPath() + " back: " + User.getInstance().getBack());
-                GetNew options = new GetNew(itracker,null);
+                GetNew options = new GetNew(webApp,null);
                 options.setDatanodes(new DataNodes("NEW",null));
                 options.Ejecute();
                 String back = t.getText().toString();
@@ -499,10 +499,10 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
     private void updateOptions() {
 
         rq = new Request(this);
-        itracker = new Itracker(this.getContext(), rq, null);
+        webApp = new webApp(this.getContext(), rq, null);
 
         /* Listing */
-        GetNew options = new GetNew(itracker,null);
+        GetNew options = new GetNew(webApp,null);
         options.Ejecute();
     }
 
@@ -655,7 +655,7 @@ public class Open_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/html");
-        intent.putExtra(Intent.EXTRA_EMAIL,new String[] {"itrackermobile@ta.telecom.com.ar"});
+        intent.putExtra(Intent.EXTRA_EMAIL,new String[] {"webAppmobile@domain.com"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "Consulta");
         intent.putExtra(Intent.EXTRA_TEXT, "Consulta enviada por: " + User.getInstance().getUserName() + "\n"+  report);
 

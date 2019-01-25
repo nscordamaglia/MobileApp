@@ -118,7 +118,7 @@ public class DialogForm extends DialogFragment implements RQcomplete<String>{
     public void onStop(){
 
         super.onStop();
-        Log.d("itracker","saliendo...");
+        Log.d("webApp","saliendo...");
         User.getInstance().setAttach(false);
     }
     @Override
@@ -483,10 +483,10 @@ public class DialogForm extends DialogFragment implements RQcomplete<String>{
                 * ejecuta la accion correspondiente
                 */
                 Request rq = new Request(FormObj.getInstance().getRq());
-                Itracker itracker = new Itracker(getActivity().getApplicationContext(), rq, null);
+                webApp webApp = new webApp(getActivity().getApplicationContext(), rq, null);
 
                             /* Action */
-                GetAction action = new GetAction(itracker,tkt);
+                GetAction action = new GetAction(webApp,tkt);
                 String act = FormObj.getInstance().getAction();
 
                 int secciones = FormObj.getInstance().getArrayElemnt().size(); Log.d("secciones", String.valueOf(secciones));

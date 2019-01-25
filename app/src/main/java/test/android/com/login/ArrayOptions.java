@@ -3,7 +3,7 @@ package test.android.com.login;
 import java.util.ArrayList;
 
 /**
- * Clase encargada de generar la lista de opciones de tificación en la creación de un nuevo itracker
+ * Clase encargada de generar la lista de opciones de tificación en la creación de un nuevo webApp
  */
 public class ArrayOptions {
 

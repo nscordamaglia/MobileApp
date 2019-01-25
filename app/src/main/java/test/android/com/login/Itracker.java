@@ -10,9 +10,9 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 /**
- * Clase encargada de armar el xml para enviarlo a itracker
+ * Clase encargada de armar el xml para enviarlo a webApp
  */
-public  class Itracker {
+public  class webApp {
 
     private final String url;
     private String response;
@@ -85,8 +85,8 @@ public  class Itracker {
 
 
 
-    public Itracker(Context c, Request rq, ProgressBar progressBar) {
-        this.url = ConfigManager.getUrlItracker();
+    public webApp(Context c, Request rq, ProgressBar progressBar) {
+        this.url = ConfigManager.getUrlwebApp();
         this.hash = new Hash();
         this.c = c;
         this.rq = rq;

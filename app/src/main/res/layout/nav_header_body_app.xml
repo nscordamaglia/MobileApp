@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="iTracker Mobile"
+        android:text="webApp Mobile"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <RelativeLayout
@@ -47,7 +47,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="itracker@ta.telecom.com.ar"
+            android:text="webApp@domain.com"
             android:layout_gravity="left"
             android:gravity="left" />
     </RelativeLayout>

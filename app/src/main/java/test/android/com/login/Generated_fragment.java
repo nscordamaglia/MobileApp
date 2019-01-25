@@ -45,7 +45,7 @@ public class Generated_fragment extends Fragment implements SwipeRefreshLayout.O
     private AppCompatActivity activity;
     private android.support.v7.app.ActionBar actionBar;
     private FloatingActionButton fab,fab1,fab2;
-    private Itracker itracker;
+    private webApp webApp;
 
     public ListView getLv1() {
         return lv1;
@@ -188,10 +188,10 @@ public class Generated_fragment extends Fragment implements SwipeRefreshLayout.O
         if(calculateFreq(ArrayTKTgen.getInstance().getDate(), c.getTime())==true || ArrayTKTgen.getInstance().getStatus().equalsIgnoreCase("empty")){
 
             Request rq = new Request(this);
-            itracker = new Itracker(this.getContext(), rq, null);
+            webApp = new webApp(this.getContext(), rq, null);
 
             /* Listing */
-            GetListGen listing = new GetListGen(itracker,null);
+            GetListGen listing = new GetListGen(webApp,null);
             listing.Ejecute();
 
         }else{
@@ -200,7 +200,7 @@ public class Generated_fragment extends Fragment implements SwipeRefreshLayout.O
             tktList = new ArrayList<>();
             tktList = ArrayTKTgen.getInstance().getArrayList();
 
-            Log.d("itracker", "status: " + ArrayTKTgen.getInstance().getStatus());
+            Log.d("webApp", "status: " + ArrayTKTgen.getInstance().getStatus());
 
 
             adapter = new ListTKTAdapter(view, tktList);
@@ -296,12 +296,12 @@ public class Generated_fragment extends Fragment implements SwipeRefreshLayout.O
                     swipeRefreshLayout.setRefreshing(false);
                     break;
                 case "Parametros invalidos en la solicitud||Sesion invalida o vencida218":
-                    itracker.setUser(User.getInstance().getUserName());
-                    itracker.setPass(User.getInstance().getPass());
+                    webApp.setUser(User.getInstance().getUserName());
+                    webApp.setPass(User.getInstance().getPass());
 
 
                     /** Login **/
-                    Login login = new Login(itracker, null);
+                    Login login = new Login(webApp, null);
                     login.Ejecute();
 
                     break;
@@ -336,7 +336,7 @@ public class Generated_fragment extends Fragment implements SwipeRefreshLayout.O
                 tktList = new ArrayList<>();
                 tktList = ArrayTKTgen.getInstance().getArrayList();
 
-                Log.d("itracker", "status: " + ArrayTKTgen.getInstance().getStatus());
+                Log.d("webApp", "status: " + ArrayTKTgen.getInstance().getStatus());
 
 
                 adapter = new ListTKTAdapter(view, tktList);

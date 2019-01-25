@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements RQcomplete<String
     private ProgressBar progressBar;
     private EditText user,pass;
     private Button button;
-    private Itracker itracker;
+    private webApp webApp;
     private ImageView img;
     private String defUser;
     private String defPass;
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements RQcomplete<String
         SharedPreferences sharedPref = this.getApplicationContext().getSharedPreferences("userInfo",Context.MODE_PRIVATE);
          defUser = sharedPref.getString("authUser",null);
          defPass = sharedPref.getString("authPass",null);
-        Log.d("itracker","user: " + defUser);
+        Log.d("webApp","user: " + defUser);
 
        if(defUser == null ) {
 
@@ -223,14 +223,14 @@ public class MainActivity extends AppCompatActivity implements RQcomplete<String
             progressBar.setVisibility(View.VISIBLE);
             img.setImageDrawable(getResources().getDrawable(R.mipmap.login));
             Request rq = new Request(this);
-            itracker = new Itracker(this.getApplicationContext(), rq, progressBar);
+            webApp = new webApp(this.getApplicationContext(), rq, progressBar);
             Log.d("autologin", "user: " + defUser + " pass: " + defPass);
-            itracker.setUser(User.getInstance().getUserName());
-            itracker.setPass(User.getInstance().getPass());
+            webApp.setUser(User.getInstance().getUserName());
+            webApp.setPass(User.getInstance().getPass());
 
 
             /** Login **/
-            Login login = new Login(itracker, null);
+            Login login = new Login(webApp, null);
             login.Ejecute();
         }else{
 

@@ -11,7 +11,7 @@ public class ConfigManager {
 
 /** url API **/
 
-    final static String urlItracker="https://example.com/api";
+    final static String urlwebApp="https://example.com/api";
 
 
 
@@ -68,7 +68,7 @@ public class ConfigManager {
 
 
     final static String xml ="<?xml version=\"1.0\" encoding=\"iso-8859-15\"?>" +
-            "<itracker>" +
+            "<webApp>" +
             "  <header>" +
             "    <front>API_DMZ</front>" +
             "    <usr>{user}</usr>" +
@@ -83,7 +83,7 @@ public class ConfigManager {
             "    <params>" +
             "    </params>" +
             "  </request>" +
-            "</itracker>";
+            "</webApp>";
 
     public static String getEditHeaderLOGOUT() {
         return editHeaderLOGOUT;
@@ -173,8 +173,8 @@ public class ConfigManager {
         return editNodesDataFORM;
     }
 
-    public static String getUrlItracker() {
-        return urlItracker;
+    public static String getUrlwebApp() {
+        return urlwebApp;
     }
 
 

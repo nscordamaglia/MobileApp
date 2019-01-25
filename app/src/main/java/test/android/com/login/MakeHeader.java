@@ -126,7 +126,7 @@ public class MakeHeader {
             try {
                 Node node = document.createElement(nodes[i]);
                 document.getElementsByTagName("params").item(0).appendChild(node);
-                Log.d("itracker", "datanode en: " + i + "valor: " + datanodes[i]);
+                Log.d("webApp", "datanode en: " + i + "valor: " + datanodes[i]);
                 node.setTextContent(datanodes[i]);
             }catch(ArrayIndexOutOfBoundsException e){e.printStackTrace();}
 
@@ -161,7 +161,7 @@ public class MakeHeader {
 
 
 
-        Log.d("itracker","toString: " + xml);
+        Log.d("webApp","toString: " + xml);
         setUrlParameters(xml);
     }
 
@@ -185,9 +185,9 @@ public class MakeHeader {
         }
 
         if (document == null){
-            Log.d("itracker", "document: null ");
+            Log.d("webApp", "document: null ");
         }else {
-            Log.d("itracker", "toXML: "+ xml);
+            Log.d("webApp", "toXML: "+ xml);
         }
         setDocument(document);
     }

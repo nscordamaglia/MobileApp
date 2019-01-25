@@ -3,7 +3,7 @@ package test.android.com.login;
 import java.util.ArrayList;
 
 /**
- * Clase que da forma a la estructura de un evento en itracker
+ * Clase que da forma a la estructura de un evento en webApp
  */
 public class EventObj {
 

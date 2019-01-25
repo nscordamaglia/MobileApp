@@ -9,14 +9,14 @@ public class GetForm extends Action {
 
     private final String method;
     private String status;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
     /**
      * Constructor
      * @param s
      */
-    public GetForm(Itracker s, TKTobj tkt) {
+    public GetForm(webApp s, TKTobj tkt) {
         super(s,tkt);
         this.method = "FORM";
         this.status = "status";
@@ -32,11 +32,11 @@ public class GetForm extends Action {
         this.status = status;
     }
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 

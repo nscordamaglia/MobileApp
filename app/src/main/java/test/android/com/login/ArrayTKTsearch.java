@@ -75,7 +75,7 @@ public class ArrayTKTsearch {
 
         for (int i = arrayList.size()-1; i >=0; i--){
 
-            Log.d("itracker",arrayList.get(i).getId());
+            Log.d("webApp",arrayList.get(i).getId());
             arrayListInv.add(arrayList.get(i));
 
         }

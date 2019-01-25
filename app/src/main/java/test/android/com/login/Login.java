@@ -3,7 +3,7 @@ package test.android.com.login;
 
 
 /**
- * Clase que se encarga de generar la conexión con itracker dando como resultado el hash de conexión utilizado a lo
+ * Clase que se encarga de generar la conexión con webApp dando como resultado el hash de conexión utilizado a lo
  * largo de la sesión
  */
 public class Login extends Action{
@@ -13,7 +13,7 @@ public class Login extends Action{
     private final String method;
     private String status;
     private String servicename;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
 
@@ -23,7 +23,7 @@ public class Login extends Action{
      * Constructor
      * @param s
      */
-    public Login(Itracker s,TKTobj t) {
+    public Login(webApp s,TKTobj t) {
         super(s,t);
 
         this.method = "LOGIN";
@@ -56,11 +56,11 @@ public class Login extends Action{
         this.servicename = servicename;
     }
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 

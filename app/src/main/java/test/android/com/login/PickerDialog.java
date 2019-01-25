@@ -12,7 +12,7 @@ import android.widget.EditText;
 import java.util.Calendar;
 
 /**
- * Created by u189299 on 13/09/2016.
+ * Created by Nicolas Scordamaglia on 13/09/2016.
  */
 public class PickerDialog extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 

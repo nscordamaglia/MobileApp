@@ -27,7 +27,7 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 
 /**
- * Clase adapter para armar el listview de eventos dentro de un itracker para mostrar en la UI
+ * Clase adapter para armar el listview de eventos dentro de un webApp para mostrar en la UI
  */
 
 public class ListEventAdapter extends BaseAdapter {
@@ -135,8 +135,8 @@ public class ListEventAdapter extends BaseAdapter {
                             FormObj.getInstance().setFile(eventlist.get(position).getvAttach().get(v.getId()));
                             FormObj.getInstance().setTypedown("adjunto");
                             Request rq = new Request(r);
-                            Itracker itracker = new Itracker(context,rq,null);
-                            GetDownload down = new GetDownload(itracker,null);
+                            webApp webApp = new webApp(context,rq,null);
+                            GetDownload down = new GetDownload(webApp,null);
                             down.Ejecute();
 
                         }
@@ -211,10 +211,10 @@ public class ListEventAdapter extends BaseAdapter {
 
                             formulario = " necesita formulario.";
                             Request rq = new Request(r);
-                            Itracker itracker = new Itracker(context, rq, null);
+                            webApp webApp = new webApp(context, rq, null);
 
                             /* Form */
-                            GetForm form = new GetForm(itracker,tkt); Log.d("tktid","envio id: " + tkt.getId().toString());
+                            GetForm form = new GetForm(webApp,tkt); Log.d("tktid","envio id: " + tkt.getId().toString());
                             String act = b.getTag().toString();
                             FormObj.getInstance().setAction(act);
                             FormObj.getInstance().setRq(r);
@@ -227,10 +227,10 @@ public class ListEventAdapter extends BaseAdapter {
 
                             formulario = " no necesita formulario.";
                             Request rq = new Request(r);
-                            Itracker itracker = new Itracker(context, rq, null);
+                            webApp webApp = new webApp(context, rq, null);
 
                             /* Action */
-                            GetAction action = new GetAction(itracker,tkt);
+                            GetAction action = new GetAction(webApp,tkt);
                             String act = b.getTag().toString();
                             String form = "[]";
                             action.getDatanodes().setEditNodesData(action.getDatanodes().getEditNodesData()+ act + ";" + form);

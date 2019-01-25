@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "263003629144",
-    "firebase_url": "https://itracker-mobile.firebaseio.com",
-    "project_id": "itracker-mobile",
-    "storage_bucket": "itracker-mobile.appspot.com"
+    "firebase_url": "https://webApp-mobile.firebaseio.com",
+    "project_id": "webApp-mobile",
+    "storage_bucket": "webApp-mobile.appspot.com"
   },
   "client": [
     {

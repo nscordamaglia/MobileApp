@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="itracker" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="webApp" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -1714,7 +1714,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/GetResponse.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/GetSelection.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/Hash.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/Itracker.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/webApp.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/ListOptionAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/ListTKTAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/test/android/com/login/Login.java" />
@@ -1868,14 +1868,14 @@
       <recent name="test.android.com.login" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\u189299\Documents\AndroidProjects\itmobile\login\app\src\main\res\drawable-xxhdpi" />
-      <recent name="C:\Users\u189299\Documents\AndroidProjects\itmobile\login\app\src\main\res\layout" />
+      <recent name="C:\Users\Nicolas Scordamaglia\Documents\AndroidProjects\itmobile\login\app\src\main\res\drawable-xxhdpi" />
+      <recent name="C:\Users\Nicolas Scordamaglia\Documents\AndroidProjects\itmobile\login\app\src\main\res\layout" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="test.android.com.login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\u189299\Documents\AndroidProjects\itmobile\login\app" />
+      <recent name="C:\Users\Nicolas Scordamaglia\Documents\AndroidProjects\itmobile\login\app" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -2562,7 +2562,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/test/android/com/login/Itracker.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/test/android/com/login/webApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8136646">
           <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />

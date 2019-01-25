@@ -1,21 +1,21 @@
 package test.android.com.login;
 
 /**
- * Clase que se extiende de Action y usa como parametro al servicio que instancia y lista los itracker de tratamiento por equipo.
+ * Clase que se extiende de Action y usa como parametro al servicio que instancia y lista los webApp de tratamiento por equipo.
  * @author Nicolas Scordamaglia
  */
 class GetList extends Action{
 
     private final String method;
     private String status;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
     /**
      * Constructor
      * @param s
      */
-    public GetList(Itracker s,TKTobj t) {
+    public GetList(webApp s,TKTobj t) {
         super(s,t);
         this.method = "LISTING";
         this.status = "status";
@@ -31,11 +31,11 @@ class GetList extends Action{
         this.status = status;
     }
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 

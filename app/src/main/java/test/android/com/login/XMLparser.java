@@ -141,7 +141,7 @@ public class XMLparser {
 
 
                         data=texto;
-                        Log.d("itracker", "hash: " + data);
+                        Log.d("webApp", "hash: " + data);
 
                     }
                     break;
@@ -198,10 +198,10 @@ public class XMLparser {
         if (xml == null) {
 
             xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> " +
-                    "<itracker><header></header><response>" +
+                    "<webApp><header></header><response>" +
                     "<error>error::null</error>" +
-                    "</response></itracker>";
-            Log.d("itracker","xml harcoding: " + xml);
+                    "</response></webApp>";
+            Log.d("webApp","xml harcoding: " + xml);
 
         }
 
@@ -225,7 +225,7 @@ public class XMLparser {
 
 
         if (document == null){
-            Log.d("itracker", " document null ");
+            Log.d("webApp", " document null ");
         }
         setDocument(document);
     }
@@ -576,7 +576,7 @@ public class XMLparser {
 
     public void UpdateTKT(NodeList nodelist) throws JSONException {
 
-        Log.d("itracker","updatetkt");
+        Log.d("webApp","updatetkt");
             int lenghtTKT = nodelist.item(0).getChildNodes().getLength();
             ArrayList<TKTobj> arrayList = new ArrayList<TKTobj>();
 
@@ -609,7 +609,7 @@ public class XMLparser {
 
     public void UpdateTKTgen(NodeList nodelist) throws JSONException {
 
-        Log.d("itracker","updatetkt");
+        Log.d("webApp","updatetkt");
         int lenghtTKT = nodelist.item(0).getChildNodes().getLength();
         ArrayList<TKTobj> arrayList = new ArrayList<TKTobj>();
 
@@ -662,7 +662,7 @@ public class XMLparser {
 
         }
 
-        Log.d("itracker","tipificacion: " + tipificacion);
+        Log.d("webApp","tipificacion: " + tipificacion);
         return tipificacion.substring(0,tipificacion.length()-2);
     }
 

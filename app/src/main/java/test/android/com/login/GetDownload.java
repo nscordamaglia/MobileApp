@@ -7,14 +7,14 @@ public class GetDownload extends Action {
 
     private final String method;
     private String status;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 
@@ -30,7 +30,7 @@ public class GetDownload extends Action {
      * Constructor
      * @param s
      */
-    public GetDownload(Itracker s,TKTobj t) {
+    public GetDownload(webApp s,TKTobj t) {
         super(s,t);
         this.method = "DOWNLOAD";
         this.status = "status";

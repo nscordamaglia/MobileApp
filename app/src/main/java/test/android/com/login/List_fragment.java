@@ -30,7 +30,7 @@ import java.util.Date;
 
 
 /**
- * Clase que se encarga de listar los itracker del inbox de tratamiento por equipo.
+ * Clase que se encarga de listar los webApp del inbox de tratamiento por equipo.
  */
 public class List_fragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener,RQcomplete<String>{
 
@@ -45,7 +45,7 @@ public class List_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
     private AppCompatActivity activity;
     private FloatingActionButton fab,fab1,fab2;
     private ActionBar actionBar;
-    private Itracker itracker;
+    private webApp webApp;
     private Request rq;
 
     public TKTobj getTkt() {
@@ -92,12 +92,12 @@ public class List_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
                     swipeRefreshLayout.setRefreshing(false);
                     break;
                 case "Parametros invalidos en la solicitud||Sesion invalida o vencida218":
-                    itracker.setUser(User.getInstance().getUserName());
-                    itracker.setPass(User.getInstance().getPass());
+                    webApp.setUser(User.getInstance().getUserName());
+                    webApp.setPass(User.getInstance().getPass());
 
 
                     /** Login **/
-                    Login login = new Login(itracker, null);
+                    Login login = new Login(webApp, null);
                     login.Ejecute();
 
                     break;
@@ -125,11 +125,11 @@ public class List_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
 
             }else {
 
-                //primer instancia del array de itrackers
+                //primer instancia del array de webApps
                 tktList = new ArrayList<>();
                 tktList = ArrayTKT.getInstance().getArrayList();
 
-                Log.d("itracker", "status: " + ArrayTKT.getInstance().getStatus());
+                Log.d("webApp", "status: " + ArrayTKT.getInstance().getStatus());
 
 
                 adapter = new ListTKTAdapter(view, tktList);
@@ -164,7 +164,7 @@ public class List_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
         actionBar = activity.getSupportActionBar();
         // update the actionbar to show the up carat/affordance
         if(actionBar == null){Log.d("actionbar","actionbar null");}
-        actionBar.setTitle("Lista de iTracker");
+        actionBar.setTitle("Lista de webApp");
 
         User.getInstance().getToogle().setDrawerIndicatorEnabled(true);
 
@@ -321,15 +321,15 @@ public class List_fragment extends Fragment implements SwipeRefreshLayout.OnRefr
         if(calculateFreq(ArrayTKT.getInstance().getDate(), c.getTime())==true || ArrayTKT.getInstance().getStatus().equalsIgnoreCase("empty")){
             //actualizo lista
             rq = new Request(this);
-            itracker = new Itracker(this.getContext(), rq, null);
+            webApp = new webApp(this.getContext(), rq, null);
 
         /* Listing */
-            GetList listing = new GetList(itracker,null);
+            GetList listing = new GetList(webApp,null);
             listing.Ejecute();
 
         }else{
             //uso lista cacheada
-            //primer instancia del array de itrackers
+            //primer instancia del array de webApps
 
             getActivity().findViewById(R.id.transfer).setVisibility(View.GONE);
             tktList = new ArrayList<>();

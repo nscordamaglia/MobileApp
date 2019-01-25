@@ -7,14 +7,14 @@ public class GetNew extends Action {
 
     private final String method;
     private String status;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 
@@ -30,7 +30,7 @@ public class GetNew extends Action {
      * Constructor
      * @param s
      */
-    public GetNew(Itracker s,TKTobj t) {
+    public GetNew(webApp s,TKTobj t) {
         super(s,t);
         this.method = "NEW";
         this.status = "status";
@@ -38,7 +38,7 @@ public class GetNew extends Action {
         this.datanodes = new DataNodes(method,t);
     }
 
-    public GetNew(Itracker s) {
+    public GetNew(webApp s) {
         super(s);
         this.service = s;
         this.method = "NEW";

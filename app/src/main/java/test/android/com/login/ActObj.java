@@ -1,7 +1,7 @@
 package test.android.com.login;
 
 /**
- * Created by u189299 on 19/04/2016.
+ * Created by Nicolas Scordamaglia on 19/04/2016.
  */
 public class ActObj {
 

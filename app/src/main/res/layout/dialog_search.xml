@@ -16,7 +16,7 @@
         android:layout_marginTop="10dp"
         android:background="#efeee4"
         android:ems="10"
-        android:hint="ingresar iTracker"
+        android:hint="ingresar webApp"
         android:inputType="number"
         android:padding="10dp"
         android:textAppearance="?android:attr/textAppearanceSmall" />

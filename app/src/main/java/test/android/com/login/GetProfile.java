@@ -7,7 +7,7 @@ public class GetProfile extends Action {
 
     private String method;
     private String status;
-    private Itracker service;
+    private webApp service;
     private DataNodes datanodes;
 
 
@@ -24,11 +24,11 @@ public class GetProfile extends Action {
         this.status = status;
     }
 
-    public Itracker getService() {
+    public webApp getService() {
         return service;
     }
 
-    public void setService(Itracker service) {
+    public void setService(webApp service) {
         this.service = service;
     }
 
@@ -40,7 +40,7 @@ public class GetProfile extends Action {
         this.datanodes = datanodes;
     }
 
-    public GetProfile(Itracker s,TKTobj t) {
+    public GetProfile(webApp s,TKTobj t) {
         super(s,t);
         this.method = "PROFILE";
         this.status = "profile";

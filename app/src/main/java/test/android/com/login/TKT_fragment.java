@@ -46,7 +46,7 @@ public class TKT_fragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private ArrayList<TKTobj> evtList;
     private ListEventAdapter adapter;
     private int position;
-    private Itracker itracker;
+    private webApp webApp;
     private DialogFragment dialog;
     private boolean  idsel = false;
     private AppCompatActivity activity;
@@ -117,12 +117,12 @@ public class TKT_fragment extends Fragment implements SwipeRefreshLayout.OnRefre
                     break;
 
                 case "Parametros invalidos en la solicitud||Sesion invalida o vencida218":
-                    itracker.setUser(User.getInstance().getUserName());
-                    itracker.setPass(User.getInstance().getPass());
+                    webApp.setUser(User.getInstance().getUserName());
+                    webApp.setPass(User.getInstance().getPass());
 
 
                     /** Login **/
-                    Login login = new Login(itracker, null);
+                    Login login = new Login(webApp, null);
                     login.Ejecute();
 
                     break;
@@ -210,7 +210,7 @@ public class TKT_fragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 Log.d("relog","entro por afterlog");
                 //tengo que reenviar la accion anterior al login
                 afterLogin();
-                //GetAction action = new GetAction(itracker);
+                //GetAction action = new GetAction(webApp);
                 //action.Resend();
 
 
@@ -255,7 +255,7 @@ public class TKT_fragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 if (idsel == true){
 
                     Log.d("getselection","entro a pedir los items");
-                    GetSelection select = new GetSelection(itracker,tkt);
+                    GetSelection select = new GetSelection(webApp,tkt);
                     select.Ejecute();
 
                 }else{
@@ -482,10 +482,10 @@ public class TKT_fragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private void updateEvent() {
 
         Request rq = new Request(this);
-        itracker = new Itracker(this.getContext(), rq, null);
+        webApp = new webApp(this.getContext(), rq, null);
 
         /* Listing */
-        GetEvent events = new GetEvent(itracker,tkt);
+        GetEvent events = new GetEvent(webApp,tkt);
         events.Ejecute();
         FloatingActionsMenu Menufab = (FloatingActionsMenu) activity.findViewById(R.id.fab);
         Menufab.collapse();
@@ -495,7 +495,7 @@ public class TKT_fragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private void afterLogin() {
 
 
-        GetAction action = new GetAction(itracker);
+        GetAction action = new GetAction(webApp);
         action.Resend();
 
     }

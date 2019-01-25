@@ -17,7 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * Created by u189299 on 12/02/2016.
+ * Created by Nicolas Scordamaglia on 12/02/2016.
  */
 public class DialogSearch extends DialogFragment {
 

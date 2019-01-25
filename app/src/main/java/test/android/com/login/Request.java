@@ -178,22 +178,22 @@ public class Request {
                 if (i == 200) {
 
                     String resultado = new String(bytes);
-                    Log.d("itracker", "onSuccess: " + resultado);
+                    Log.d("webApp", "onSuccess: " + resultado);
                     setResponse(resultado);
                     /* poder avisar al hilo principal para ejecutar la actualizacion de la lista*/
                     callback.onTaskComplete(resultado,method);
 
 
 
-                }else{ Log.d("itracker", "codigo: " + i);}
+                }else{ Log.d("webApp", "codigo: " + i);}
 
             }
 
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
 
-                Log.d("itracker", "falló la conexíón, codigo: " + i,throwable);
-                setResponse("<?xml version=\"1.0\" encoding=\"UTF-8\"?><itracker><header></header><response><error>fallo de conexión</error></response></itracker>");
+                Log.d("webApp", "falló la conexíón, codigo: " + i,throwable);
+                setResponse("<?xml version=\"1.0\" encoding=\"UTF-8\"?><webApp><header></header><response><error>fallo de conexión</error></response></webApp>");
                 callback.onTaskComplete(getResponse(),method);
 
             }
